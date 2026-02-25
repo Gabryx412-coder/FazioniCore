@@ -1,0 +1,114 @@
+# ============================================================
+# FazioniCore Configuration
+# ============================================================
+
+# Impostazioni database
+database:
+  enabled: true
+  host: localhost
+  port: 3306
+  name: fazionicore
+  username: root
+  password: password
+  pool-size: 10
+
+# Impostazioni fazioni
+faction:
+  creation-cost: 500.0
+  max-name-length: 16
+  min-name-length: 3
+  max-tag-length: 5
+  min-tag-length: 2
+  max-description-length: 100
+  friendly-fire-default: false
+  open-default: false
+
+# Sistema claim
+claim:
+  cost: 100.0
+  enabled-worlds:
+    - world
+    - world_nether
+    - world_the_end
+  allow-wilderness-build: true
+  
+  # Buffer Zone Settings
+  buffer-zone:
+    enabled: false
+    radius: 1
+  
+  # Claim Tool Settings  
+  tool:
+    enabled: true
+  
+  # Visualization Settings
+  visualization:
+    enabled: true
+    
+  # Map Settings
+  map:
+    max-radius: 10
+
+# Limite claim per livello (livello -> max claim)
+claim-limits:
+  1: 10
+  2: 20
+  3: 35
+  4: 55
+  5: 80
+
+# Sistema livelli
+levels:
+  # Soglie per salire di livello (blocks-claimed + members * multiplier)
+  thresholds:
+    2: 15
+    3: 35
+    4: 65
+    5: 100
+  # Moltiplicatore per i membri nel calcolo livello
+  member-multiplier: 2.0
+  # Bonus per livello
+  bonuses:
+    max-members:
+      1: 10
+      2: 20
+      3: 35
+      4: 50
+      5: 75
+    bank-bonus-percent:
+      1: 0.0
+      2: 2.0
+      3: 5.0
+      4: 8.0
+      5: 12.0
+
+# Sistema guerra
+war:
+  tnt-damage-in-claims: true
+  creeper-damage-in-claims: false
+  explosion-damage-in-claims: false
+  raid-cooldown-hours: 6
+  war-points-to-money: 10.0
+  points-per-block-broken: 1
+  points-per-kill: 5
+  cooldown-between-wars-hours: 24
+
+# Anti-inside
+anti-inside:
+  enabled: true
+  protection-time-minutes: 30
+
+# Shield (orari di protezione: HH:mm formato 24h)
+shield:
+  enabled: true
+  # start e end in orario locale del server
+  default-start: "22:00"
+  default-end: "10:00"
+
+# Economia
+economy:
+  war-points-reward-enabled: true
+  faction-bank-tax-percent: 0.0
+
+# Messaggi (prefisso)
+prefix: "&8[&6Fazioni&8] &r"

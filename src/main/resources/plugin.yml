@@ -1,0 +1,43 @@
+name: FazioniCore
+version: '${version}'
+main: it.fazionicore.FazioniCore
+api-version: 1.19
+authors: [ Gabryx412-Coder ]
+description: Plugin per gestione fazioni con sistema claim
+depend: [Vault]
+
+commands:
+  f:
+    description: Comandi principali delle fazioni
+    aliases: [faction]
+  claim:
+    description: Comandi per gestire i territori
+    usage: /claim <claim|unclaim|info|list|tool|show>
+
+permissions:
+  fazionicore.*:
+    description: Tutti i permessi
+    default: op
+    children:
+      fazionicore.faction.*: true
+      fazionicore.claim.*: true
+  
+  fazionicore.claim.*:
+    description: Tutti i permessi claim
+    default: true
+    children:
+      fazionicore.claim.use: true
+      fazionicore.claim.tool: true
+      fazionicore.claim.visualization: true
+      
+  fazionicore.claim.use:
+    description: Usare i comandi claim base
+    default: true
+    
+  fazionicore.claim.tool:
+    description: Ottenere il claim tool
+    default: true
+    
+  fazionicore.claim.visualization:
+    description: Visualizzare i chunk
+    default: true

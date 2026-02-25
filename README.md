@@ -1,11 +1,9 @@
 # ⚔️ FazioniCore
 
-> Plugin fazioni professionale per Paper 1.21.1 — economia, claim, guerre e molto altro.
 
 ![Java](https://img.shields.io/badge/Java-21-orange?style=flat-square)
 ![Paper](https://img.shields.io/badge/Paper-1.21.1-blue?style=flat-square)
 ![Vault](https://img.shields.io/badge/Vault-dipendenza-green?style=flat-square)
-![Classi](https://img.shields.io/badge/Classi-18%2F20-lightgrey?style=flat-square)
 
 ---
 
@@ -279,4 +277,5 @@ FazioniCore/
         ├── plugin.yml
         └── config.yml
 ```
+
 
